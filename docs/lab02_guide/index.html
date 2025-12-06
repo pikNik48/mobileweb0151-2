@@ -275,11 +275,159 @@
             box-shadow: 0 0 5px rgba(255, 140, 90, 0.2);
             display: inline-block;
         }
-        .header-text{
+
+        .header-text {
             display: flex;
             justify-content: space-between;
             width: 100%;
         }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 10px;
+        }
+
+        /* ===============================
+   Responsive Images 
+================================= */
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* ===============================
+   Layout Flex Responses
+================================= */
+        .main-con {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        /* ป้องกันข้อความล้น */
+        .main-1-text,
+        .main-3-text {
+            flex: 1 1 300px;
+            min-width: 280px;
+        }
+
+        /* รูปซ้าย/ขวา */
+        .main-1 img,
+        .main-3 img {
+            flex: 1 1 300px;
+            min-width: 280px;
+            border-radius: 12px;
+        }
+
+        /* ===============================
+   NAV Responsive 
+================================= */
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 20px;
+            background: #e04006;
+            flex-wrap: wrap;
+            /* ป้องกันล้น */
+        }
+
+        .nav-menu ul {
+            display: flex;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .nav-menu ul li a {
+            color: white;
+            font-weight: 600;
+            padding: 8px 16px;
+            border-radius: 6px;
+        }
+
+        .nav-menu ul li a:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        /* ===============================
+   MEDIA QUERY — สำคัญที่สุด!
+================================= */
+        @media (max-width: 1024px) {
+
+            /* ลด padding */
+            .nav-menu {
+                padding: 10px 15px;
+            }
+
+            /* เมนูชิดกัน */
+            .nav-menu ul {
+                gap: 18px;
+            }
+        }
+
+        /* Tablet & Mobile */
+        @media (max-width: 768px) {
+
+            /* NAV เป็นแนวตั้ง */
+            .nav-menu {
+                flex-direction: column;
+                text-align: center;
+                gap: 10px;
+            }
+
+            .nav-menu ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .nav-menu ul li a {
+                display: block;
+                padding: 12px 20px;
+            }
+
+            /* ส่วนเนื้อหาเรียงลง */
+            .main-con {
+                flex-direction: column;
+                gap: 20px;
+                text-align: center;
+            }
+
+            .main-1-text h1,
+            .text-title {
+                font-size: 1.5rem;
+            }
+
+            /* รูปเต็มจอ */
+            .main-1 img,
+            .main-3 img {
+                width: 100%;
+                margin: 0 auto;
+            }
+        }
+
+        /* มือถือเล็กมาก */
+        @media (max-width: 480px) {
+
+            .nav-menu h1 {
+                font-size: 1.2rem;
+            }
+
+            .nav-menu ul li a {
+                font-size: 0.95rem;
+                padding: 10px 16px;
+            }
+
+            .main-con {
+                padding: 10px;
+            }
+        }
+
+
 
 
         html {
@@ -334,9 +482,9 @@
             <div class="main-con-1">
 
 
-                <div class="main-1" id="highlight">
+                <section class="main-1" id="highlight">
                     <img src="img/แนะนำ.png" alt="KKU Campus" style="width: 100%; height: auto;" />
-                </div>
+                </section>
                 <div class="main-2" style="padding: 20px;">
                     <h2>⭐ แนะนำสถานที่เด่นภายในมหาวิทยาลัยขอนแก่น (Khon Kaen University – KKU)</h2>
                     <p>
@@ -347,7 +495,7 @@
                         ทำให้ทั้งนักศึกษา บุคลากร และผู้มาเยือนสัมผัสได้ถึงความอบอุ่นและเป็นมิตรตั้งแต่ก้าวแรกที่เข้ามา
                     </p>
                 </div>
-                <div class="main-3">
+                <section class="main-3">
                     <h2>🏢 คอมเพล็กซ์ (Complex) — ศูนย์รวมไลฟ์สไตล์ของนักศึกษา</h2>
                     <img src="img/2.png" alt="Complex KKU" style="width: 100%; height: auto;" />
                     <div class="main-3-1">
@@ -377,7 +525,7 @@
 
                     </div>
 
-                </div>
+                </section>
                 <div class="main-4">
                     <h2>🌳 สวนสาธารณะเกษตร — พื้นที่สีเขียวเพื่อการพักผ่อน</h2>
                     <img src="img/3.png" alt="สวนสาธารณะ KKU" style="width: 100%; height: auto;" />
@@ -403,7 +551,7 @@
                     </div>
                 </div>
 
-                <div class="main-5">
+                <section class="main-5">
                     <h2>🏞 หอประชุมกาญจนาภิเษก (หอกาญ) และบึงสีฐาน — แลนด์มาร์คของ KKU</h2>
                     <img src="img/4.png" alt="หอสมุดกลาง KKU" style="width: 100%; height: auto;" />
                     <div class="main-5-1">
@@ -429,11 +577,11 @@
 
                     </div>
 
-                </div>
+                </section>
 
 
 
-                <div class="main-6">
+                <section class="main-6">
                     <h2>🌅 บึงสีฐาน — สวนธรรมชาติใจกลางมหาวิทยาลัย</h2>
                     <img src="img/5.png" alt="หอสมุดกลาง KKU" style="width: 100%; height: auto;" />
                     <div class="main-6-1">
@@ -468,7 +616,7 @@
 
                     </div>
 
-                </div>
+                </section>
 
 
 
