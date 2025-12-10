@@ -1,0 +1,80 @@
+// src/app.ts
+import { Student } from "./models/Student.js";
+import { StudentManager } from "./managers/StudentManager.js";
+import { showList } from "./utils/showList.js";
+
+const manager = new StudentManager();
+manager.loadFromLocalStorage();
+
+function renderTable(elementId: string = "studentTableBody"): void {
+  const tableBody = document.getElementById(elementId)! as HTMLElement;
+  tableBody.innerHTML = "";
+  const students = manager.getAllStudents();
+  showList<Student>(students);
+  students.forEach((s) => {
+    tableBody.innerHTML += `
+      <tr>
+        <td>${s.id}</td>
+        <!-- <<<-- แก้ไข (สีแดง): เพิ่มคอลัมน์ -->
+        <td>${s.title_name}</td>
+        <td>${s.first_name}</td>
+        <td>${s.last_name}</td>
+        <td>${s.email}</td>
+        <!-- <<<-- /แก้ไข -->
+        <td>${s.year}</td>
+        <td>${s.major}</td>
+      </tr>
+    `;
+  });
+}
+
+(document.getElementById("addBtn") as HTMLButtonElement).onclick = () => {
+  const id = (document.getElementById("id") as HTMLInputElement).value.trim();
+  const year = Number((document.getElementById("year") as HTMLInputElement).value);
+  const major = (document.getElementById("major") as HTMLInputElement).value.trim();
+
+  // <<<-- แก้ไข (สีแดง): ดึงค่า title/first/last/email จาก input
+  const title_name = (document.getElementById("title_name") as HTMLInputElement).value.trim();
+  const first_name = (document.getElementById("first_name") as HTMLInputElement).value.trim();
+  const last_name = (document.getElementById("last_name") as HTMLInputElement).value.trim();
+  const email = (document.getElementById("email") as HTMLInputElement).value.trim();
+  // <<<-- /แก้ไข
+
+  if (!id || !first_name || !last_name || !email) {
+    alert("กรุณากรอกข้อมูล ID, ชื่อ, นามสกุล และอีเมลให้ครบ");
+    return;
+  }
+
+  const student: Student = { id, title_name, first_name, last_name, email, year, major };
+  manager.addStudent(student);
+  renderTable();
+};
+
+(document.getElementById("searchNameBtn") as HTMLButtonElement).onclick = () => {
+  const keyword = (document.getElementById("searchName") as HTMLInputElement).value;
+  const results = manager.findStudentsByName(keyword);
+  showList<Student>(results);
+  alert(`ผลการค้นหา: ${results.length} คน`);
+};
+
+(document.getElementById("searchMajorBtn") as HTMLButtonElement).onclick = () => {
+  const keyword = (document.getElementById("searchMajor") as HTMLInputElement).value;
+  const results = manager.findStudentsByMajor(keyword);
+  showList<Student>(results);
+  alert(`พบในสาขา: ${results.length} คน`);
+};
+
+// <<<-- เพิ่ม: ค้นหาด้วย Email (สีแดง)
+(document.getElementById("searchEmailBtn") as HTMLButtonElement).onclick = () => {
+  const email = (document.getElementById("searchEmail") as HTMLInputElement).value.trim();
+  const found = manager.findStudentByEmail(email);
+  if (found) {
+    showList<Student>([found]);
+    alert(`พบอีเมล: ${found.first_name} ${found.last_name}`);
+  } else {
+    alert("ไม่พบอีเมลนี้");
+  }
+};
+// <<<-- /เพิ่ม
+
+renderTable("studentTableBody");

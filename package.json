@@ -9,5 +9,20 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "packageManager": "pnpm@10.23.0"
+  "packageManager": "pnpm@10.23.0",
+  "directories": {
+    "doc": "docs"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pikNik48/mobileweb0151-2.git"
+  },
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/pikNik48/mobileweb0151-2/issues"
+  },
+  "homepage": "https://github.com/pikNik48/mobileweb0151-2#readme"
 }
