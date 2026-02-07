@@ -7,6 +7,107 @@
     <title>ผลงาน นางสาวณัฏฐณิชา โยธะคง</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
 </head>
+<style>
+    /* ===== Global ===== */
+    body {
+        font-family: 'Kanit', sans-serif;
+        background: linear-gradient(180deg, #fff8fb 0%, #fefdf8 50%, #f5faff 100%);
+        color: #555;
+    }
+
+    /* พื้นหลัง abstract แบบแพง */
+    body::before,
+    body::after {
+        content: "";
+        position: fixed;
+        width: 420px;
+        height: 420px;
+        border-radius: 50%;
+        filter: blur(110px);
+        opacity: 0.35;
+        z-index: -1;
+    }
+
+    body::before {
+        background: #ffd6e8;
+        top: -160px;
+        left: -160px;
+    }
+
+    body::after {
+        background: #dbeeff;
+        bottom: -160px;
+        right: -160px;
+    }
+
+    /* ===== Header ===== */
+    header h3 {
+        color: #c85c8e;
+        font-weight: 500;
+        letter-spacing: 0.3px;
+    }
+
+    header p {
+        margin-bottom: 4px;
+        color: #777;
+    }
+
+    /* ===== Section title ===== */
+    h4 {
+        font-weight: 500;
+        color: #b65c87 !important;
+    }
+
+    /* ===== Cards ===== */
+    .card {
+        border: none;
+        border-radius: 22px;
+        background: #ffffff;
+        box-shadow: 0 10px 28px rgba(0, 0, 0, 0.06);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 18px 38px rgba(0, 0, 0, 0.08);
+    }
+
+    .card-body {
+        padding: 22px;
+    }
+
+    .card h5 {
+        font-weight: 500;
+        color: #c45a8a !important;
+    }
+
+    .card p {
+        font-size: 0.95rem;
+        color: #666;
+    }
+
+    /* ===== Buttons ===== */
+    .btn-primary {
+        border: none;
+        border-radius: 999px;
+        padding: 6px 18px;
+        font-size: 0.9rem;
+        background: linear-gradient(135deg, #f3a6c4, #f6d57c);
+        box-shadow: 0 6px 16px rgba(243, 166, 196, 0.35);
+    }
+
+    .btn-primary:hover {
+        opacity: 0.9;
+        transform: translateY(-1px);
+    }
+
+    /* ===== Footer ===== */
+    footer {
+        color: #aaa;
+        font-size: 0.85rem;
+    }
+</style>
+
 
 <body>
     <header class="text-center py-4">
@@ -14,11 +115,11 @@
         <p>ภาคการศึกษา 2/2568</p>
         <p>
             <strong>ชื่อ - สกุลนักศึกษา : นางสาวณัฏฐณิชา โยธะคง </strong>
-            
+
         </p>
         <p>
             <strong>รหัสนักศึกษา: 673380015-1</strong>
-            
+
         </p>
     </header>
     <main class="container mt-4">
@@ -32,7 +133,8 @@
                             Week 1: การเตรียม Workspace
                         </h5>
                         <p>
-                            ติดตั้งเครื่องมือที่จำเป็นสำหรับฝึกปฏิบัติการในรายวิชา ทดลองสร้าง ionic-vue และ ionic-project
+                            ติดตั้งเครื่องมือที่จำเป็นสำหรับฝึกปฏิบัติการในรายวิชา ทดลองสร้าง ionic-vue และ
+                            ionic-project
                         </p>
                         <a href="./lab01_vue/index.html" class="btn btn-primary mb-2" target="_blank">Lab01_Vue</a>
                         <a href="./lab01_react/index.html" class="btn btn-primary mb-2" target="_blank">Lab01_React</a>
@@ -69,7 +171,7 @@
                     </div>
                 </div>
             </div>
-             <div class="col-md-6 col-lg-4">
+            <div class="col-md-6 col-lg-4">
                 <div class="card h-100">
                     <div class="card-body">
                         <h5 class="text-primary">
@@ -80,6 +182,36 @@
                         <a href="./lab04.html" class="btn btn-primary mb-2" target="_blank">ดูผลงาน</a>
                         <br />
                         วันที่ส่งผลงาน : 10 มกราคม 2569
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="text-primary">
+                            Week 5: Photo Gallery
+                        </h5>
+                        <p>การพัฒนาแอปพลิเคชัน Photo Gallery ด้วย Ionic React
+                        </p>
+                        <a href="./lab05.html" class="btn btn-primary mb-2" target="_blank">ดูผลงาน</a>
+                        <br />
+                        วันที่ส่งผลงาน : 7 กุมภาพันธุ์ 2569
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="text-primary">
+                            Week 6: Photo Gallery
+                        </h5>
+                        <p>การพัฒนาแอปพลิเคชัน Photo Gallery ด้วย Ionic Vue
+                        </p>
+                        <a href="./lab06.html" class="btn btn-primary mb-2" target="_blank">ดูผลงาน</a>
+                        <br />
+                        วันที่ส่งผลงาน : 8 กุมภาพันธุ์ 2569
                     </div>
                 </div>
             </div>
