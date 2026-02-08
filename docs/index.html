@@ -11,65 +11,54 @@
     /* ===== Global ===== */
     body {
         font-family: 'Kanit', sans-serif;
-        background: linear-gradient(180deg, #fff8fb 0%, #fefdf8 50%, #f5faff 100%);
-        color: #555;
-    }
-
-    /* พื้นหลัง abstract แบบแพง */
-    body::before,
-    body::after {
-        content: "";
-        position: fixed;
-        width: 420px;
-        height: 420px;
-        border-radius: 50%;
-        filter: blur(110px);
-        opacity: 0.35;
-        z-index: -1;
-    }
-
-    body::before {
-        background: #ffd6e8;
-        top: -160px;
-        left: -160px;
-    }
-
-    body::after {
-        background: #dbeeff;
-        bottom: -160px;
-        right: -160px;
+        background-color: #f4f6fb;
+        /* พื้นหลังเทาอ่อน */
+        color: #333;
     }
 
     /* ===== Header ===== */
+    /* ===== Header (ปรับให้น้ำเงินนุ่มลง) ===== */
+    header {
+        background-color: #f0f5ff;
+        /* ฟ้าน้ำเงินอ่อน */
+        color: #1f3c88;
+        border-bottom: 5px solid #ffc107;
+        /* เหลือง */
+    }
+
     header h3 {
-        color: #c85c8e;
-        font-weight: 500;
-        letter-spacing: 0.3px;
+        font-weight: 600;
+        letter-spacing: 0.4px;
+        color: #1f3c88;
     }
 
     header p {
         margin-bottom: 4px;
-        color: #777;
+        color: #3a5ba0;
     }
+
 
     /* ===== Section title ===== */
     h4 {
-        font-weight: 500;
-        color: #b65c87 !important;
+        font-weight: 600;
+        color: #dc3545 !important;
+        /* แดง */
     }
 
     /* ===== Cards ===== */
     .card {
         border: none;
-        border-radius: 22px;
+        border-radius: 16px;
         background: #ffffff;
-        box-shadow: 0 10px 28px rgba(0, 0, 0, 0.06);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+        transition: transform 0.25s ease, box-shadow 0.25s ease;
+        border-top: 6px solid #0d6efd;
+        /* เส้นน้ำเงิน */
     }
 
     .card:hover {
-        transform: translateY(-6px);
-        box-shadow: 0 18px 38px rgba(0, 0, 0, 0.08);
+        transform: translateY(-5px);
+        box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
     }
 
     .card-body {
@@ -77,34 +66,42 @@
     }
 
     .card h5 {
-        font-weight: 500;
-        color: #c45a8a !important;
+        font-weight: 600;
+        color: #0d6efd !important;
+        /* น้ำเงิน */
     }
 
     .card p {
         font-size: 0.95rem;
-        color: #666;
+        color: #555;
     }
 
     /* ===== Buttons ===== */
     .btn-primary {
         border: none;
         border-radius: 999px;
-        padding: 6px 18px;
+        padding: 7px 20px;
         font-size: 0.9rem;
-        background: linear-gradient(135deg, #f3a6c4, #f6d57c);
-        box-shadow: 0 6px 16px rgba(243, 166, 196, 0.35);
+        background-color: #dc3545;
+        /* แดง */
+        color: #ffffff;
+        box-shadow: 0 4px 12px rgba(220, 53, 69, 0.35);
+        transition: all 0.2s ease;
     }
 
     .btn-primary:hover {
-        opacity: 0.9;
-        transform: translateY(-1px);
+        background-color: #bb2d3b;
+        transform: translateY(-2px);
     }
 
     /* ===== Footer ===== */
     footer {
-        color: #aaa;
+        background-color: #212529;
+        /* ดำเข้ม */
+        color: #ffc107;
+        /* เหลือง */
         font-size: 0.85rem;
+        padding: 16px 0;
     }
 </style>
 
