@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Firebase Authen</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Kanit', sans-serif;
+    background: linear-gradient(135deg, #ffe4f2, #fff6b7);
+    overflow-x: hidden;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 20px;
+    background: #ffb6d9;
+    color: white;
+    font-size: 28px;
+    font-weight: 600;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Hero Image แนวนอน */
+.hero {
+    width: 90%;
+    max-width: 1000px;
+    margin: 30px auto;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+
+/* Content */
+.content {
+    text-align: center;
+    padding: 20px;
+    color: #ff69b4;
+    font-size: 18px;
+}
+
+/* Floating Emojis */
+.emoji {
+    position: fixed;
+    font-size: 30px;
+    animation: float 6s infinite ease-in-out;
+}
+
+.emoji:nth-child(1) { left: 10%; animation-delay: 0s; }
+.emoji:nth-child(2) { left: 30%; animation-delay: 2s; }
+.emoji:nth-child(3) { left: 60%; animation-delay: 4s; }
+.emoji:nth-child(4) { left: 80%; animation-delay: 1s; }
+
+@keyframes float {
+    0% { top: 100%; opacity: 0; }
+    50% { opacity: 1; }
+    100% { top: -10%; opacity: 0; }
+}
+
+/* Cute Button */
+.button {
+    background: #ffd54f;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 30px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.button:hover {
+    background: #ff69b4;
+    transform: scale(1.05);
+}
+</style>
+
+</head>
+<body>
+
+<header>
+    🍰 Firebase Authen
+ 🍭
+</header>
+
+<div class="hero">
+    <img src="login.png">
+    <img src="logintest.png">
+    <img src="login2.png">
+    <img src="login12345.png">
+    <img src="login101.png">
+    <img src="loginemail.png">
+    <img src="loginphon.png">
+</div>
+
+<div class="content">
+   แบบฝึกหัด 7 การพัฒนาแอปด้วย Ionic ร่วมกับ Firebase Authentication
+ 💕<br>
+   
+    
+</div>
+
+<!-- Floating Emojis -->
+<div class="emoji">🍩</div>
+<div class="emoji">🍭</div>
+<div class="emoji">🧁</div>
+<div class="emoji">🍬</div>
+
+</body>
+</html>
