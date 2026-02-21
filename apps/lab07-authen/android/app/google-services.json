@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "987703365037",
+    "project_id": "lab06-expense-0151",
+    "storage_bucket": "lab06-expense-0151.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:987703365037:android:d73a1d7caee252341a6524",
+        "android_client_info": {
+          "package_name": "cpkku.twachi.lab07"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "987703365037-1bt21qcu7eb60221h8h5gmpc2dh0dvoe.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA1QPtIYZAHYpXdocBRLqyBQmU12mpyrho"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "987703365037-1bt21qcu7eb60221h8h5gmpc2dh0dvoe.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
