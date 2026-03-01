@@ -1,0 +1,8 @@
+h1 {
+  font-weight: 700;
+  color: var(--ion-color-primary);
+}
+
+ion-card {
+  border-radius: 16px;
+}
